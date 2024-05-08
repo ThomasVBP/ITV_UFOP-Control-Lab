@@ -5,10 +5,9 @@ language used in ABB's 800xA programming software. The purpose is to streamline
 the work of engineers in implementing neural networks in an industrial environment.
 
 This file was designed considering the syntax of neural networks generated in 
-Python using the 'scikit-learn' library, which include a neuron in both the 
-input and output layers and multiple hidden layers with multiple neurons. 
-Therefore, neural networks that do not meet these requirements may not be 
-correctly converted.
+Python using the 'scikit-learn' library, which include one neuron in the output
+layer and multiple hidden layers with multiple neurons. Therefore, neural networks
+that do not meet these requirements may not be correctly converted.
 
 
 A brief description of the code's operation:
