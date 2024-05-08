@@ -36,6 +36,8 @@ In order to complete the conversion, only the *Main* file need to be run. Before
 
 To demonstrate the usefulness of the program, the example provided is related to a real industrial operation of a mining circuit (image below). In the given circuit, the ore coming from the mine is processed by a crusher, stored in a silo, then transported thourgh a series of conveyor belts to a pile. The physical belt scale instaled in the CB-02 measures the circuit's mass flow rate For control purposes, it would be interesting to have the mass flow rate measurement closer to the feeder. Hence, a soft sensor has been created to infer the circuit's mass flow rate using information of the BC-01 current. 
 
+![Circuit](https://github.com/ThomasVBP/ML_Convertion-Python_To_StructuredText/assets/131695492/e55a1b4d-eb0f-4a49-9ca3-c29ff92e2f0f)
+
 In DATASET, there is a dataset collected from historical data of the circuit operation. The features are the average and standart deviation of the last 10 current data, and the output is the mass flow rate. Using LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE and LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE, one can create, respectively, a Multilayer Perceptron and a Decision Tree for the given example. Then, one need only to run the corresponding *Main* file to convert the python algorithm into a Structured Text code.
 
 ## License
