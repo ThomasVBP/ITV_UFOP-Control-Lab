@@ -17,7 +17,7 @@ This is a program that converts machine learning model algorithms built using py
 
 ## How to use it
 
-The program is composed of two folders. [One](DecisionTree) for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
+The program is composed of two folders. [One](DecisionTree) for the convertion of decision tree algorithms, and the [other](Multilayer\ Perceptron) for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
 
 *Main* file:
 
