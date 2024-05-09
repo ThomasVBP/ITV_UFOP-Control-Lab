@@ -13,7 +13,27 @@ This is a program that converts machine learning model algorithms built using py
 
 * The machine learning algorithm must be originally built using Scikit-learn library.
 
-* The syntax of the generated Structured Text code is compatible with the 800xA software, from ABB. 
+* The syntax of the generated Structured Text code is compatible with the 800xA software, from ABB.
+
+## Repository structure
+
+┌── Data/
+│ │── AllData.png
+│ └── Bus2Data.mat
+│── OptimallyTrainedANNs/
+│ │── netbest.mat
+│ └── netcbest.mat 
+│── Photos/
+│ └── BusBelfast.jpg
+│── Results/
+│ └── Prediction.png
+│── DataPreProcessingBus2.m
+│── Prediction.m
+│── PredictionOpenClose.m
+│── README.md
+│── TrainANN.m
+└── TrainANNsinLoop.m
+
 ## How to use it
 
 The program is composed of two folders. [One](Decision Tree/Functions.py) for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
