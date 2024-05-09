@@ -16,7 +16,7 @@ This is a program that converts machine learning model algorithms built using py
 * The syntax of the generated Structured Text code is compatible with the 800xA software, from ABB. 
 ## How to use it
 
-The program is composed of two folders. [One](https://www.sciencedirect.com/journal/softwarex/publish/guide-for-authors#17106) for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
+The program is composed of two folders. [One](Decision Tree/Functions.py) for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
 
 *Main* file:
 
