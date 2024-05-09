@@ -39,7 +39,7 @@ To demonstrate the usefulness of the program, the example provided is related to
 
 ![Circuit](https://github.com/ThomasVBP/ML_Convertion-Python_To_StructuredText/assets/131695492/e55a1b4d-eb0f-4a49-9ca3-c29ff92e2f0f)
 
-In [Example](src/Example), there is a dataset collected from historical data of the circuit operation. The features are the average and standart deviation of the last 10 current data, and the output is the mass flow rate. Using LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE and LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE, one can create, respectively, a Multilayer Perceptron and a Decision Tree for the given example. Then, one need only to run the corresponding *Main* file to convert the python algorithm into a Structured Text code.
+In [Example](src/Example), there is a dataset collected from historical data of the circuit operation. The features are the average and standart deviation of the last 10 current data, and the output is the mass flow rate. Using [generate_DT](src/Example/generate_MLP) and [generate_DT](src/Example/generate_DT), one can create, respectively, a Multilayer Perceptron and a Decision Tree for the given example. Then, one need only to run the corresponding *Main* file to convert the python algorithm into a Structured Text code.
 
 ## License
 
