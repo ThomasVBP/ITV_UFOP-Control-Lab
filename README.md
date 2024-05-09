@@ -17,7 +17,7 @@ This is a program that converts machine learning model algorithms built using py
 
 ## How to use it
 
-The program is composed of two folders. [One](DecisionTree) for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
+The program is composed of two folders. One for the convertion of decision tree algorithms, and the other for the convertion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
 
 *Main* file:
 
@@ -42,3 +42,5 @@ To demonstrate the usefulness of the program, the example provided is related to
 In DATASET, there is a dataset collected from historical data of the circuit operation. The features are the average and standart deviation of the last 10 current data, and the output is the mass flow rate. Using LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE and LINKAR ARQUIVO DENTRO DE PASTA EXAMPLE, one can create, respectively, a Multilayer Perceptron and a Decision Tree for the given example. Then, one need only to run the corresponding *Main* file to convert the python algorithm into a Structured Text code.
 
 ## License
+
+This project is licensed under the terms of the MIT License.
