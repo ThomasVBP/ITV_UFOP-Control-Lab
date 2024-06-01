@@ -27,9 +27,7 @@ A brief description of how the code works:
     ---------------------------------------------------------------------------
     When starting this code, the user needs to provide the following information:
         1- Name of the .txt file containing the decision tree;
-        2- The type of tree (classification or regression);
-        3- The names of the input variables to be written in the converted tree;
-        4- The name of the output variable to be written in the converted tree.
+        2- The name of the output variable to be written in the converted tree.
     
     After entering the information, the code within this file, along with the 
     'Functions' file, will generate a .txt file saved in the same directory as 
@@ -48,7 +46,7 @@ A brief description of how the code works:
 """
 import numpy as np
 import re
-from Functions import Modify, If_Elsif_Insertion, Decreased_indentation, Insertion_terms
+from Functions import If_Elsif_Insertion, Decreased_indentation, Insertion_terms
 
 # -------- Input tree information --------            
 
@@ -77,52 +75,17 @@ if 'class' in content:
 elif 'value' in content:
     tree_type = 2 
 
-# -------- Checking the number of input variables -------- 
-
-pat = r'feature_(\d+)'
-value = re.findall(pat, content)
-qt = [int(val) for val in value]
-var_qt = max(qt)
-num_variables = var_qt + 1
-
-variables = []
-for i in range(num_variables):
-    variable = input(f"Enter input variable {i+1}: ")
-    variables.append(variable)
-output_variable = input("Enter the output variable: ")
-
-# -------- Substituting the input and output variables -------- 
-
-for i, word in enumerate(variables):
-    Modify(destination_file, f"feature_{i}", word)
-
-with open(destination_file, "r+") as file:
-    content = file.read()
-        
-    if tree_type == 1:
-        content = re.sub(r'class: (.+)', r'class: \1;', content)
-        content = content.replace('class', output_variable)
-    elif tree_type == 2:
-        content = re.sub(r'value: \[([0-9.]+)\]', r'value: \1;', content)
-        content = content.replace('value', output_variable)
-
-    file.seek(0)
-    file.write(content)
-    file.truncate() 
-
 # -------- Counting and removal of slashes (|) -------- 
 
 with open(destination_file, 'r') as file:   
     lines = file.readlines()
-    
 num_slashes = np.empty(len(lines), dtype=int)
 for i in range(len(lines)):
     num_slashes[i] = lines[i].count('|')
     lines[i] = lines[i].replace("|", "")
-    
 with open(destination_file, "w") as file:
     file.write(''.join(lines))
-  
+
 # -------- Insertion of If and Elsif -------- 
 
 If_Elsif_Insertion(num_slashes, destination_file)
@@ -130,8 +93,42 @@ If_Elsif_Insertion(num_slashes, destination_file)
 # -------- Syntax adjustments -------- 
 
 modifications = [("--- ", ""), (":", " :=")]
+with open(destination_file, 'r') as file:
+    content = file.read()
 for from_, to_ in modifications:
-    Modify(destination_file, from_, to_)
+    content = content.replace(from_, to_)
+with open(destination_file, 'w') as file:
+    file.write(content)
+    
+# -------- Create a list with the names of the input variables and add the name of the output variable --------
+
+variables = set()
+with open(destination_file, 'r') as file:
+    for line in file:
+        if line.strip():
+            first_word = line.strip().lstrip('if').lstrip('elsif').split()[0]
+            if first_word not in ('value', 'class') and first_word not in variables:
+                variables.add(first_word)
+    while True:
+        output_variable = input("Enter the output variable: ")
+        if output_variable not in variables:
+            break
+        else:
+            print("ERROR: The output variable should be different from the input variables. Please provide a different variable.")
+
+# -------- Substituting the input and output variables -------- 
+
+with open(destination_file, "r+") as file:
+    content = file.read()    
+    if tree_type == 1:
+        content = re.sub(r'class := (.+)', r'class := \1;', content)
+        content = content.replace('class', output_variable)
+    elif tree_type == 2:
+        content = re.sub(r'value := \[([0-9.]+)\]', r'value := \1;', content)
+        content = content.replace('value', output_variable)
+    file.seek(0)
+    file.write(content)
+    file.truncate() 
     
 # -------- Insertion of the term 'end_if' and ';' at the end of the lines -------- 
 
@@ -147,26 +144,22 @@ with open(destination_file, 'a') as file:
         file.write('end_if;' + '\n')
 
 with open (destination_file, 'r') as file:
-    lines = file.readlines()
-    
+    lines = file.readlines()   
 for i in range(len(calculated_indices)): 
     line = calculated_indices[i]
     for j in range(len(lines)): 
         previous_line = lines[j]
         if j == line: 
             modified_line = (" " * indentation[i]) + 'end_if;' + '\n' + previous_line 
-            lines[j] = modified_line
-            
+            lines[j] = modified_line         
 with open(destination_file, 'w') as file:
     file.write(''.join(lines))
     
 # -------- Inclusion of the term 'then' -------- 
     
 with open(destination_file, 'r') as file:
-    original_text = file.read()
-    
+    original_text = file.read()   
 modified_text = re.sub(r'if (.+)', r'if (\1) then', original_text)
-
 with open(destination_file, 'w') as file:
     file.write(modified_text)
     
@@ -179,6 +172,6 @@ with open(table_file, 'w') as file:
         line = f'{variable}\treal\t\tin\tyes\n'
         file.write(line)
     if tree_type == 1:
-        file.write(f'{output_variable}\tint\t\tout\tyes\n')
+        file.write(f'{output_variable}\tdint\t\tout\tyes\n')
     elif tree_type == 2:
         file.write(f'{output_variable}\treal\t\tout\tyes\n')

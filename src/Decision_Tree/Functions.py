@@ -6,28 +6,6 @@ A description of the functionality and parameters of each function is provided
 within the function itself.
 
 """
-
-import re
-
-def Modify (filepath, from_, to_):
-    """
-    This function performs the replacement of all occurrences of a desired word 
-    with another desired word.
-    Input Parameters:
-        filepath = Name of the file where the replacements will be made;
-        from_ = Words to be replaced;
-        to_ = Words to be inserted.
-        
-    """
-    
-    file = open(filepath,"r+")
-    read_mode = file.read()
-    search_word = from_
-    divisions = re.split(search_word, read_mode)
-    modifications = to_.join(divisions) 
-    file = open(filepath, 'w')
-    file.write(modifications)
-    file.close()
     
 def If_Elsif_Insertion(vector, filepath):
     """
