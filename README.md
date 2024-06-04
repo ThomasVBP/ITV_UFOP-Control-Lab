@@ -1,5 +1,6 @@
 
 # ML converter: Python -> Structured Text
+[![DOI](https://zenodo.org/badge/787913706.svg)](https://zenodo.org/doi/10.5281/zenodo.11477492)
 
 
 
