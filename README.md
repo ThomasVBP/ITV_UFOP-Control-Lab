@@ -25,6 +25,15 @@ This library is divided into two modules: the Decision Tree Converter and the Mu
 
 A dataset file is expected to generate the machine learning algorithm using the Scikit-learn library. This file must be located in the same directory as the corresponding converter module.
 
+## Installation
+
+Download the repository:
+git clone https://github.com/ThomasVPB/MLconverter.git
+
+Install globally in the Python environment:
+cd <path_to_library>
+pip install .
+
 
 ***
 
