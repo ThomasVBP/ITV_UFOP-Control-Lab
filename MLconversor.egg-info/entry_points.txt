@@ -1,2 +1,0 @@
-[console_scripts]
-train-ml = ml_library.main:main
