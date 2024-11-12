@@ -91,7 +91,7 @@ To demonstrate the usefulness of the program, the example provided is related to
 
 ![Circuit](https://github.com/ThomasVBP/ML_Convertion-Python_To_StructuredText/assets/131695492/e55a1b4d-eb0f-4a49-9ca3-c29ff92e2f0f)
 
-Within [decision_tree_converter](src/decision_tree_converter) and [multilayer_perceptron_converter](src/multilayer_perceptron_converter), there is a dataset collected from historical data of the circuit operation. The features are the average and standard deviation of the last 10 current data, and the output is the mass flow rate. Using [generate_DT](src/Example/generate_MLP) and [generate_DT](src/Example/generate_DT), one can create, respectively, a Multilayer Perceptron and a Decision Tree for the given example. Then, one need only to run the corresponding *Main* file to convert the python algorithm into a Structured Text code.
+Within [decision_tree_converter](src/decision_tree_converter) and [multilayer_perceptron_converter](src/multilayer_perceptron_converter), there is a dataset collected from historical data of the circuit operation. The features are the average and standard deviation of the last 10 current data, and the output is the mass flow rate. Using [decision_tree_converter](src/decision_tree_converter/conversion) and [multilayer_perceptron_converter](src/multilayer_perceptron_converter/conversion), one can create and convert to a Structured Text code, respectively, a Decision Tree and a Multilayer Perceptron for the given example. 
 
 ## License
 
