@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a program that converts machine learning model algorithms built using python into Structured Text algorithms. The motivation of this program is to facilitate and fasten the implementation of machine learning algorithms into an industrial Programmable Logic Controller - PLC.
+MLconverter is a Python library designed to convert Decision Tree and Multilayer Perceptron models into a Structured Text format. The motivation behind this program is to facilitate and accelerate the implementation of machine learning algorithms in an industrial Programmable Logic Controller (PLC).
 
 #### Some important details:
 
