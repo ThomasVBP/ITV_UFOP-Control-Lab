@@ -21,16 +21,10 @@ This library is divided into two modules: the Decision Tree Converter and the Mu
 * The generated Structured Text code syntax is compatible with the PLC model from ABB, Industrial IT 800xA DCS.
 
 ## How to use it
+#### Input file
 
-The program is composed of two folders. One for the conversion of decision tree algorithms, and the other for the conversion of multilayer perceptron algorithms. Each folder is composed of two files: *Main* and *Function*.
+A dataset file is expected to generate the machine learning algorithm using the Scikit-learn library. This file must be located in the same directory as the corresponding converter module.
 
-*Main* file:
-
-This file performs the conversion of the language of machine learning algorithms.
-
-*Function* file:
-
-This file contains the functions used by the 'Main'. 
 
 ***
 
