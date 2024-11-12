@@ -41,27 +41,34 @@ Once the repository files are downloaded to your machine, you can run the conver
 ###### Via Command Prompt
 
 *# Navigate to the library directory*
+
 cd path\MLconverter
 
-# Create a virtual environment
+*# Create a virtual environment*
+
 python -m venv env
 
-# Activate the virtual environment
+*# Activate the virtual environment*
+
 For Windows: .\env\Scripts\activate
 For macOS/Linux: source env/bin/activate
 
-# Install the library dependencies
+*# Install the library dependencies*
+
 pip install .
 
-# Navigate to the folder of the converter you want to use
+*# Navigate to the folder of the converter you want to use*
+
 cd decision_tree_converter (or multilayer_perceptron_converter)
 
-# Run the conversion script
+*# Run the conversion script*
+
 python conversion.py
-During the execution of the conversion.py script, you will need to provide the name of the .csv file, the name of the .txt file, and the output variable.
-#Deactivating the Virtual Environment:
-After running, remember to deactivate the virtual environment to keep your development environment clean:
-deactivate
+During the execution of the conversion.py script, you will need to provide the name of the dataset file, the name of the .txt file to be generated, and the machine learning output variable.
+
+*#Deactivating the Virtual Environment*
+
+After running, remember to deactivate the virtual environment to keep your development environment clean: deactivate
 
 
 
