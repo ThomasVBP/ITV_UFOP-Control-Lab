@@ -28,7 +28,7 @@ A dataset file is expected to generate the machine learning algorithm using the 
 #### Installation
 
 Download the repository:
-git clone https://github.com/ThomasVPB/MLconverter.git
+git clone [https://github.com/ThomasVPB/MLconverter.git](https://github.com/ThomasVBP/ML_Convertion-Python_To_StructuredText.git)
 
 Install globally in the Python environment:
 cd <path_to_library>
