@@ -64,18 +64,26 @@ cd decision_tree_converter (or multilayer_perceptron_converter)
 *# Run the conversion script*
 
 python conversion.py
+
 During the execution of the conversion.py script, you will need to provide the name of the dataset file, the name of the .txt file to be generated, and the machine learning output variable.
 
 *#Deactivating the Virtual Environment*
 
 After running, remember to deactivate the virtual environment to keep your development environment clean: deactivate
 
+###### Via Python directly
 
+Simply run *conversion.py* directly in Python (e.g., using an IDE like PyCharm, Jupyter, or the Python terminal):
 
+python conversion.py
 
-
+In this case, the same instructions will be presented to provide the name of the dataset file, the name of the .txt file to be generated, and the machine learning output variable.
 
 ***
+
+After runing the code, the converter software produces two .txt files:
+* The model algorithm formatted in the Structured Text syntax;
+* A table with information on the input and output parameters needed for variable declaration in the 800xA program.
 
 ## Example
 
