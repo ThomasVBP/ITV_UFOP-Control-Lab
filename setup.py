@@ -18,7 +18,7 @@ setup(
     description='Biblioteca para geração e conversão de técnicas de machine learning: decision tree e multilayer perceptron.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/ThomasVBP/MLconverter',
+    url='https://github.com/ThomasVBP/ML_Convertion-Python_To_StructuredText',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
