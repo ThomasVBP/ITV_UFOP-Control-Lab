@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: MLconversor
+Version: 0.1
+Summary: Biblioteca para geração e conversão de técnicas de machine learning: decision tree e multilayer perceptron.
+Home-page: https://github.com/ThomasVBP/MLconverter
+Author: Y. Campos, P. Pereira, R. Duarte, J. Perez, G. Pessin, T. Pinto
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
