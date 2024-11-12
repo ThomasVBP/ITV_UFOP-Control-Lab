@@ -8,17 +8,17 @@
 
 MLconverter is a Python library designed to convert Decision Tree and Multilayer Perceptron models into a Structured Text format. The motivation behind this program is to facilitate and accelerate the implementation of machine learning algorithms in an industrial Programmable Logic Controller (PLC).
 
-#### Features:
+## Features:
 
 This library is divided into two modules: the Decision Tree Converter and the Multilayer Perceptron Converter. Both modules include docstrings explaining their structure and functions.
 
-## Some important details
+#### Some important details
 
-* The machine learning models that are able to be converted are Decision Tree and Multilayer Perceptron. Both can be either regression or classification algorithms. 
+* The original machine learning algorithm must be built using the Scikit-learn library;
 
-* The machine learning algorithm must be originally built using Scikit-learn library.
+* The converted models can be either regression or classification algorithms;
 
-* The syntax of the generated Structured Text code is compatible with the 800xA software, from ABB.
+* The generated Structured Text code syntax is compatible with the PLC model from ABB, Industrial IT 800xA DCS.
 
 ## How to use it
 
