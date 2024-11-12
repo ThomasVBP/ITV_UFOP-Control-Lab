@@ -65,7 +65,7 @@ cd decision_tree_converter (or multilayer_perceptron_converter)
 
 python conversion.py
 
-During the execution of the conversion.py script, you will need to provide the name of the dataset file, the name of the .txt file to store the algorithm information, and the machine learning output variable.
+During the execution of the conversion.py script, you will need to provide the name of the dataset file, the name of the .txt file to store the converted algorithm, and the machine learning output variable.
 
 *#Deactivating the Virtual Environment*
 
@@ -77,7 +77,7 @@ Simply run *conversion.py* directly in Python (e.g., using an IDE like PyCharm, 
 
 python conversion.py
 
-In this case, the same instructions will be presented to provide the name of the dataset file, the name of the .txt file to store the algorithm information, and the machine learning output variable.
+In this case, the same instructions will be presented to provide the name of the dataset file, the name of the .txt file to store the converted algorithm, and the machine learning output variable.
 
 ***
 
